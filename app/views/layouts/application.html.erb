@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RorFirstProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+   <div id="top-bar">
+     <% if flash["notice"] %>
+    <p  class="alert alert-primary"><%= flash["notice"] %></p>
+  <% end %>
+  <%# <% user.errors.each do |error| %>
+    <%# <li><%= error.full_message</li> %>
+<%# <% end %>  
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-2 col-12">
+                    <div class="d-flex justify-content-between">
+                        <a href="#" class="download-link"><i class="fad fa-arrow-alt-to-bottom"></i> Download The App</a> 
+                        <div class="menu-icon"><i class="fas fa-align-justify"></i></div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="row g-0">
+                        <div class="col ">
+                            <select name="" class="form-control search-form-lang">
+                                <option value="Karachi">Eng Lang</option>
+                                <option value="Karachi">English</option>
+                                <option value="Karachi">Bangali</option>
+                                <option value="Karachi">BAlochi</option>
+                                <option value="Karachi">Siraiki</option>
+                                <option value="Karachi">Japani</option>
+                                <option value="Karachi">Memon</option>
+                            </select>
+                        </div>
+                        <div class="col-7 link-tag">
+                         <% if current_user %>
+                        <%= link_to "Log out", new_session_path,  method: :delete, data: {confirm:"are you sure"}, class:"account-link" %>
+                        <%  else %>
+                            <%= link_to  "Login", new_session_path, class:"account-link"  %>                        
+                        <% end %>
+                            <span>&nbsp;/</span>
+                            <%= link_to  "Register", new_user_path, class:"account-link" %>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <header id="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-2 col-6 col-area">
+                    <div class="cell-area">
+                        <h3 class="phone-area">
+                            24/7 Support for Contact
+                        </h3>
+                        <a href="tel:14084451331" class="phone-area-1 text-center">(1) 408 445 1331</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 col-area">
+                    <div class="text-center">
+                      <%= image_tag("logo.png", alt: "", class:"img-fluid") %>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="text-center">
+                        <%= link_to  "Submit your Ad",new_post_path,  class:"header-btn text-center" %>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <%= yield %>
+     <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="footer-hd">Why Choose Rental in New York</h2>
+                    <p class="footer-para-2">We Specialise in Appliance on Rent It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="footer-hd">What to Rent</h2>
+                    <p class="footer-para-2">We Specialise in Appliance on Rent It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day.</p>
+                </div>
+            </div>
+            <div class="row mt-5 border-row-1">
+                <div class="col-lg-4">
+                    <div class="footer-box">
+                        <div class="footer-logo">
+                            <img src="./images/logo.png" alt="">
+                        </div>
+                        <p class="footer-para">He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+                        <div class="d-flex">
+                          <a href="https://play.google.com/store/apps/details?id=com.facebook.katana&hl=en&gl=US"><div class="social-icon-area text-center">
+                            <i class="fab fa-facebook-f"></i>
+                          </div></a>  
+                          <a href="https://twitter.com/?lang=en"><div class="social-icon-area text-center">
+                            <i class="fab fa-twitter"></i>
+                        </div></a>
+                        <a href="https://www.pinterest.com/"><div class="social-icon-area text-center">
+                            <i class="fab fa-pinterest-p"></i>
+                        </div></a>  
+                        <a href="https://www.linkedin.com/feed/"><div class="social-icon-area text-center">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div></a>  
+                        <a href="https://www.google.com/"><div class="social-icon-area text-center">
+                            <i class="fab fa-google-plus-g"></i>
+                        </div></a>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="">
+                        <h2  class="list-hd">Rental</h2>
+                        <ul class="footer-list list-unstyled">
+                            <li><a href="./car-rent.html">About Us</a></li>
+                            <li><a href="./contact-us.html">Contact Us</a></li>
+                            <li><a href="./car-list-view.html">Culture</a></li>
+                            <li><a href="./blog-single.html">Careers</a></li>
+                            <li><a href="./blog-gridview.html">Investors</a></li>
+                        </ul>
+                    </div>
+                        <ul class="footer-list list-unstyled mt-5">
+                            <li><a href="./car-list.html">Blog</a></li>
+                            <li><a href="./home-page-2.html">FaQs</a></li>
+                            <li><a href="./index.html">Rental Terms & Conditions
+                            </a></li>
+                            <li><a href="./listing-page.html">Documents that we ask</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2  class="list-hd">Policies</h2>
+                    <ul class="footer-list list-unstyled">
+                        <li><a href="./owner-pf.html">Shipping Policy</a></li>
+                        <li><a href="#">Privacy Policy
+                        </a></li>
+                        <li><a href="#">Cancellations & Modifications
+                        </a></li>
+                        <li><a href="#">Return & Refund
+                        </a></li>
+                        <li><a href="#">Referral Trems & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h2 class="footer-bottom-hd text-center">Copyrighting© 2017 <span class="footer-span">Levley</span> , All rights reserved.</h2>
+                </div>
+                <%# <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+     %>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>

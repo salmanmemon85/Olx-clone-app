@@ -1,0 +1,22 @@
+
+<%= form_with(model: user, local: true ) do |f| %>
+<div class="register-input-area">
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<div class="register-input-area">
+<%= f.label :email %>
+<%= f.email_field  :email %>
+</div>
+<div class="register-input-area">
+<%= f.label :phone %>
+<%= f.telephone_field :phone %>
+</div>
+<div class="register-input-area">
+<%= f.label :password %>
+<%= f.password_field :password %>
+</div>
+<div>
+<%= f.submit class:"login-btn mt-3" %>
+</div>
+<% end %>

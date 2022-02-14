@@ -1,0 +1,320 @@
+
+ 
+    <section id="banner-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-around">
+                        <a href="./index.html" class="banner-top-list">Home</a>
+                        <a href="#" class="banner-top-list">/</a>
+                        <a href="./home-page-2.html" class="banner-top-list">Dashboard</a>
+                        <a href="#" class="banner-top-list">/</a>
+                        <a href="./home-page-2.html" class="banner-top-list">Posted Ads</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="list-of-categories-blocks second-menu">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./index.html">
+                            <img src="./images/house-img.png" alt="" class="mx-auto">
+                            <span>Real Estate</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./home-page-2.html">
+                            <img src="./images/tabs-img.png" alt="" class="mx-auto">
+                            <span>Mobile&Tabs</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./listing-page.html">
+                            <img src="./images/services.png" alt="" class="mx-auto">
+                            <span>Services</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./owner-pf.html">
+                            <img src="./images/events-img.png" alt="" class="mx-auto">
+                            <span>Electrinics</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./plan.html">
+                            <img src="./images/pets-img.png" alt="" class="mx-auto">
+                            <span>Pats&PetCare</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./setting.html">
+                            <img src="./images/fashion-img.png" alt="" class="mx-auto">
+                            <span>Fashion</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./car-list.html">
+                            <img src="./images/entern-img.png" alt="" class="mx-auto">
+                            <span>Entertainment</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./messege.html">
+                            <img src="./images/events-img.png" alt="" class="mx-auto">
+                            <span>Event</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./contact-us.html">
+                            <img src="./images/jobs-img.png" alt="" class="mx-auto">
+                            <span>Jobs</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./register.html">
+                            <img src="./images/cars-bikes-img.png" alt="" class="mx-auto">
+                            <span>Car & Bikes</span> 
+                        </a>
+                    </div>
+                </div>
+            <div class="close-icon"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+    </div>
+    <section id="post-section">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-lg-2">
+                    <div class="listing-area">
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="./post-ads.html">Posts Ad</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="./ad-listing.html">Listing Ad</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="#">Messege</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="#">Plan</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="#">Setting</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="#">Delete</a>
+                        </div>
+                        <div class="d-flex hover-listing-area">
+                            <i class="fad fa-birthday-cake"></i>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-1">&nbsp;</div> -->
+                <div class="col-lg-8">
+                    <%= form_with(model: post, local: true) do |f| %>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                                <div class="Category-select-area">
+                                    <label for="Select Category">Model</label>
+                                    <%= f.text_field :model %>
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="Category-select-area">
+                                <label for="Select Category">Manufacturing Year</label>
+                                <%= f.text_field :mfg %>
+                            </div>
+                            </div>
+                    <div class="Category-select-area col-lg-6">
+                        <label for="Ad Title">Ad Title*</label>
+                        <%= f.text_field :title %>
+                    </div>
+                    <div class="col-lg-6">
+                            <div class="Category-select-area">
+                                <label for="Select Category">KM Driven</label>
+                                <%= f.text_field :km %>
+                            </div>
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="Category-select-area">
+                                <label for="Select Category">Price</label>
+                                <%= f.text_field  :price %>
+                            </div>
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="Category-select-area">
+                                <%= collection_select(:post, :category_id, Category.all, :id, :category_name) %>
+                             </div>
+                            </div> 
+                    </div>
+                  
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="Category-select-area">
+                                <label for="Select Category">Discription</label>
+                                <%=  f.text_area :desc, id:"dis-text-area" %>
+                            </div>
+                            </div>
+                              
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-6">
+                            <div class="Category-select-area">
+                                <label for="Select Category">Upload</label>
+                                <%= f.file_field :images, :multiple => true %>
+                            </div>
+                    </div>
+                    <div class="row mt-4">
+                        
+                            <div class="col-lg-3">
+                            <%= f.submit  class: "brows-btn"%>
+                            </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-1">
+                    <div class="post-sep"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-1">
+                    <h2 class="plan-hd">Select Plan</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-3">
+                    <div class="basic-plan-area text-center">
+                        <div class="basic-area-1 text-center">
+                            <h2>Basic Plan</h2>
+                        </div>
+                        <a href="#" class="price-hd">$39.00 <span>/Per Month</span> </a>
+                        <div class="basic-sep"></div>
+                        <div class="text-center">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Yearly Car Inspection
+                                </a></li>
+                                <li><a href="#">Full Polishing
+                                </a></li>
+                                <li><a href="#">Wedding Jewelset</a></li>
+                                <li><a href="#">80 GB Monthly Bandwidth</a></li>
+                                <li><a href="#">Wedding Drees</a></li>
+                                <li><a href="#">Featured Properties
+                                </a></li>
+                                <li><a href="#">SEO Strategy Usage</a></li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="select-btn">Select Plan</button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="basic-plan-area text-center">
+                        <div class="basic-area-1 text-center">
+                            <h2>Basic Plan</h2>
+                        </div>
+                        <a href="#" class="price-hd">$39.00 <span>/Per Month</span> </a>
+                        <div class="basic-sep"></div>
+                        <div class="text-center">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Yearly Car Inspection
+                                </a></li>
+                                <li><a href="#">Full Polishing
+                                </a></li>
+                                <li><a href="#">Wedding Jewelset</a></li>
+                                <li><a href="#">80 GB Monthly Bandwidth</a></li>
+                                <li><a href="#">Wedding Drees</a></li>
+                                <li><a href="#">Featured Properties
+                                </a></li>
+                                <li><a href="#">SEO Strategy Usage</a></li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="select-btn">Select Plan</button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="basic-plan-area text-center">
+                        <div class="basic-area-1 text-center">
+                            <h2>Basic Plan</h2>
+                        </div>
+                        <a href="#" class="price-hd">$39.00 <span>/Per Month</span> </a>
+                        <div class="basic-sep"></div>
+                        <div class="text-center">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Yearly Car Inspection
+                                </a></li>
+                                <li><a href="#">Full Polishing
+                                </a></li>
+                                <li><a href="#">Wedding Jewelset</a></li>
+                                <li><a href="#">80 GB Monthly Bandwidth</a></li>
+                                <li><a href="#">Wedding Drees</a></li>
+                                <li><a href="#">Featured Properties
+                                </a></li>
+                                <li><a href="#">SEO Strategy Usage</a></li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="select-btn">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-2">
+                    <div class="text-center">
+                        <h2 class="note-hd"> Packages bought can only be applied to Ads in Location: New york & Category: Cars</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-5">
+                    <div class=" icon-hd-area">
+                        <div class="d-flex">
+                            <i class="fas fa-info-circle"></i>
+                            <h2>Learn more <a href="#">about Featured Ads</a>  and its <a href="#">terms of use</a> </h2>
+                        </div>
+                        <h2>By clicking 'Submit' you agree to our<a href="#">Terms of Use</a>  & <a href="#"> Posting Rules</a> </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-2">
+                    <button type="button" class="header-btn text-center">Submit your Ad</button>
+                </div>
+            </div>
+        </div>
+    </section>

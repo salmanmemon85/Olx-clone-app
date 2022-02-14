@@ -1,0 +1,338 @@
+   <section class="home-page-banner">
+        <div class="container">
+            <form class="row gx-1">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <select name="" class="form-control search-form-field">
+                        <option value="Karachi">All City</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Karachi">Hydrabad</option>
+                        <option value="Karachi">Sukkur</option>
+                        <option value="Karachi">Lahore</option>
+                        <option value="Karachi">Islamabad</option>
+                        <option value="Karachi">Quetta</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <select name="" class="form-control search-form-field">
+                        <option value="Karachi">All Categories</option>
+                        <option value="Karachi">Appliances</option>
+                        <option value="Karachi">Car</option>
+                        <option value="Karachi">Furniture</option>
+                        <option value="Karachi">Bikes</option>
+                        <option value="Karachi">Entertainment</option>
+                        <option value="Karachi">Fashion</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-8 col-12">
+                    <input type="text" placeholder="Search in all city" class="form-control search-form-field">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-12">
+                    <button type="button" class="btn-search">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                   
+                </div>
+            </form>
+        </div> 
+    </section>
+    <div class="list-of-categories-blocks">
+        <div class="close-icon"><i class="fas fa-times"></i></div>
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./index.html">
+                         <%= image_tag("house-img.png", alt: "", class:"mx-auto") %>
+                            <span>Real Estate</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./home-page-2.html">
+                         <%= image_tag("tabs-img.png", alt: "", class:"mx-auto") %>
+                            <span>Mobile&Tabs</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./listing-page.html">
+                         <%= image_tag("services.png", alt: "", class:"mx-auto") %>
+                            <span>Services</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./owner-pf.html">
+                         <%= image_tag("events-img.png", alt: "", class:"mx-auto") %>
+                            <span>Electrinics</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./plan.html">
+                         <%= image_tag("pets-img.png", alt: "", class:"mx-auto") %>
+                            <span>Pats&PetCare</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./setting.html">
+                         <%= image_tag("fashion-img.png", alt: "", class:"mx-auto") %>
+                            <span>Fashion</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./car-list.html">
+                         <%= image_tag("entern-img.png", alt: "", class:"mx-auto") %>
+                            <span>Entertainment</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./messege.html">
+                         <%= image_tag("events-img.png", alt: "", class:"mx-auto") %>
+                            <span>Event</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./contact-us.html">
+                         <%= image_tag("jobs-img.png", alt: "", class:"mx-auto") %>
+                            <span>Jobs</span> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-12">
+                    <div class="category-block">
+                        <a href="./register.html">
+                         <%= image_tag("cars-bikes-img.png", alt: "", class:"mx-auto") %>
+                            <span>Car & Bikes</span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <section class="sec-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="sec-hd text-center">Popular Categories</h2>
+                </div>
+            </div>
+         <div class="row mt-5">
+              <% @categories.each do |category| %>
+               <div class="col-lg-4 col-12 col-md-6">
+                    <a href="./car-list-view.html" class="tag"><div class="sec-box-img">
+                        <div class="car-img-area">
+                            <img class="img-fluid car-img" src="https://www.freepnglogos.com/uploads/car-png/car-png-large-images-40.png" alt="">
+                        </div>    
+                        <div>
+                            <h3 class="car-img-area-hd"><%= category.category_name%></h3>
+                            <p class="box-para"><%= category.category_dis%></p>
+                            <%= link_to  "View All",category_path(category),  class:"view-tag" %>
+                        </div>
+                    </div></a>
+                </div>
+            <% end %> 
+         </div>
+                
+               
+        </div> 
+    </section>
+    <section id="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- <button type="button" class="pre-cat">pre</button> -->
+                    
+                        <ul class="responsive list-unstyled">
+                            <div class="row">
+                                <li><a href="#" class="tag">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-12">
+                                            <div class="mobile-img">
+                                            <%= image_tag("mobile-img.png", alt: "") %>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-12">
+                                            
+                                            <div class="text-area">
+                                                <h2 class="slider-hd">How It Works</h2>
+                                                <p class="cta-para">Browse and Discover for Appliances</p>
+                                                <button type="button" class="slider-btn">Tearm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            </div>
+                            <div class="row">
+                                <li><a href="#" class="tag">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-12">
+                                            <div class="mobile-img">
+                                             <%= image_tag("mobile-img.png", alt: "") %>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-12">
+                                            
+                                            <div class="text-area">
+                                                <h2 class="slider-hd">How It Works</h2>
+                                                <p class="cta-para">Browse and Discover for Appliances</p>
+                                                <button type="button" class="slider-btn">Tearm</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </li>
+                            </div>
+                            <div class="row">
+                                <li><a href="#" class="tag">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-12">
+                                            <div class="mobile-img">
+                                             <%= image_tag("mobile-img.png", alt: "") %>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-12">
+                                            
+                                            <div class="text-area">
+                                                <h2 class="slider-hd">How It Works</h2>
+                                                <p class="cta-para">Browse and Discover for Appliances</p>
+                                                <button type="button" class="slider-btn">Tearm</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </li>
+                            </div>
+                            <div class="row">
+                                <li><a href="#" class="tag">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-12">
+                                            <div class="mobile-img">
+                                             <%= image_tag("mobile-img.png", alt: "") %>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-12">
+                                            
+                                            <div class="text-area">
+                                                <h2 class="slider-hd">How It Works</h2>
+                                                <p class="cta-para">Browse and Discover for Appliances</p>
+                                                <button type="button" class="slider-btn">Tearm</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </li>
+                            </div>
+                            <div class="row">
+                                <li><a href="#" class="tag">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-12">
+                                            <div class="mobile-img">
+                                             <%= image_tag("mobile-img.png", alt: "") %>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-12">
+                                            
+                                            <div class="text-area">
+                                                <h2 class="slider-hd">How It Works</h2>
+                                                <p class="cta-para">Browse and Discover for Appliances</p>
+                                                <button type="button" class="slider-btn">Terms</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </li>
+                            </div>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta-secion-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-center cta-hd">Why Rental is #1 Service Provider in New York</h2>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="cta-img-area mt-5">
+                        <div class="text-center">
+                            <%= image_tag("cta-img.png", alt: "") %>
+                        </div>
+                        <h3 class="cta-box-hd text-center">Quick responses</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="cta-img-area mt-5">
+                        <div class="text-center">
+                        <%= image_tag("download-app-img.png", alt: "") %>
+                        </div>
+                        <h3 class="cta-box-hd text-center">Download App</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="cta-img-area mt-5">
+                        <div class="text-center">
+                        <%= image_tag("post-img.png", alt: "") %>
+                        </div>
+                        <h3 class="cta-box-hd text-center">Post Free Ads</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="cta-img-area mt-5">
+                        <div class="text-center">
+                        <%= image_tag("verified-img.png", alt: "") %>
+                        </div>
+                        <h3 class="cta-box-hd text-center">100% Verified</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="main-area">
+                        <h2 class="cta-mobile-hd">New York first Rental Subscription App</h2>
+                        <div class="d-flex main-box-area">
+                            <div class="">
+                            <%= image_tag("google-play-area.png", alt: "") %>
+                            </div>
+                            <div class="app-area">
+                            <%= image_tag("app-box.png", alt: "") %>
+                            </div>
+                        </div>
+                        <div class="phone-num">
+                            <input type="tel" placeholder="+1 Enter your phone number">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-3">
+                    <div class="text-center">
+                            <%= image_tag("cta-mobile-img.png", alt: "") %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
